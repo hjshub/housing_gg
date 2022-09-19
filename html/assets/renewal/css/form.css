@@ -1,0 +1,169 @@
+@charset 'utf-8';
+
+/*-----------------------------------------------------------------*/
+/* form
+/*-----------------------------------------------------------------*/
+
+/*Select Style*/
+.selectArea {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: auto;
+  height: 50px;
+  vertical-align: top;
+  font-size: 0;
+  background-color: #fff;
+}
+.selectArea label {
+  position: absolute;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.selectArea label:after {
+  position: absolute;
+  display: inline-block;
+  right: 20px;
+  top: 20px;
+  width: 17px;
+  height: 10px;
+  background: url('../images/ico-arr-down.png') 0 0 no-repeat;
+  background-size: 100% auto;
+  z-index: 10;
+  content: '';
+}
+.selectArea select {
+  position: relative;
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  min-width: 150px;
+  width: 100%;
+  padding: 0 54px 0 30px;
+  line-height: 50px;
+  height: 50px;
+  border: none;
+  z-index: 20;
+  font-size: 18px;
+}
+.selectArea select option {
+  min-height: auto;
+}
+.selectArea select::-ms-expand {
+  display: none;
+}
+.selectArea + span {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0 20px;
+  line-height: 40px;
+}
+
+/*form style*/
+.checkArea {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  line-height: 1;
+}
+.checkArea label {
+  padding-left: 20px;
+  color: #666;
+  font-size: 0.875rem;
+}
+.checkArea input[type='checkbox'] {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #d5d5d5;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
+/*Button Style*/
+[class*='btn-wrapper'] {
+  width: 100%;
+  text-align: left;
+  margin: 25px 0;
+  padding: 0;
+  font-size: 0;
+}
+[class*='btn-wrapper'].inline {
+  width: auto;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+[class*='btn-type'] {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 0;
+  min-width: 90px;
+  padding: 10px 13px;
+  border-color: currentColor;
+  border-style: solid;
+  border-width: 1px;
+  color: #111;
+  cursor: pointer;
+  font-size: 14px;
+}
+[class*='btn-type'] + [class*='btn-type'] {
+  margin-left: 17px;
+}
+[class*='btn-type']:after,
+[class*='btn-type']:before {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+[class*='btn-type'].rounded {
+  border-radius: 10px;
+}
+.btn-type-wide {
+  width: 100%;
+  max-width: 390px;
+  min-height: 65px;
+  font-size: 20px;
+}
+.btn-type-mid {
+  min-width: 160px;
+}
+[class*='btn-type'].green {
+  background-color: #13a89e;
+  color: #fff;
+}
+[class*='btn-type'].blue {
+  background-color: #004097;
+  border-color: #223359;
+  color: #fff;
+}
+[class*='btn-type'].navy {
+  background-color: #223359;
+  border-color: #223359;
+  color: #fff;
+}
+[class*='btn-type'].gray {
+  color: #555;
+  border-color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-type-wide {
+    max-width: none;
+  }
+}
