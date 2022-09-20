@@ -94,7 +94,10 @@ strong {
 }
 .main-section-wrap .board-top h4 {
   font-size: 32px;
-  line-height: 1.2;
+  line-height: 1;
+}
+.main-section-wrap .board-top h4 span {
+  vertical-align: top;
 }
 .main-section-wrap .board-top .btn-more {
   position: absolute;
@@ -102,6 +105,7 @@ strong {
   right: 0;
   line-height: 26px;
   padding-right: 36px;
+  color: #111;
 }
 .main-section-wrap .board-top .btn-more::before {
   position: absolute;
@@ -693,6 +697,9 @@ strong {
   padding-top: 30px;
   position: relative;
 }
+.main-section-03 .board-top .btn-more {
+  top: 30px;
+}
 .main-section-03 .board-top h4::before {
   width: 50px;
   height: 4px;
@@ -1125,6 +1132,9 @@ strong {
 @media screen and (max-width: 768px) {
   .main-section-wrap .board-top h4 {
     font-size: 26px;
+  }
+  .main-section-wrap .board-list li::before {
+    margin-top: 0;
   }
 
   .main-section-01 .mainCarousel .slide-inner {
