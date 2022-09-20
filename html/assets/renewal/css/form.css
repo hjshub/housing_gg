@@ -122,6 +122,11 @@
   cursor: pointer;
   font-size: 14px;
 }
+[class*='btn-type'] em {
+  display: inline-block;
+  line-height: 1.4;
+  vertical-align: baseline;
+}
 [class*='btn-type'] + [class*='btn-type'] {
   margin-left: 17px;
 }
@@ -143,13 +148,13 @@
 .btn-type-mid {
   min-width: 160px;
 }
-[class*='btn-type'].green {
-  background-color: #13a89e;
-  color: #fff;
+[class*='btn-type'].bd-green {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #6dc48e;
 }
 [class*='btn-type'].blue {
-  background-color: #004097;
-  border-color: #223359;
+  background-color: #0e4a9d;
   color: #fff;
 }
 [class*='btn-type'].navy {

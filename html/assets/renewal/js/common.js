@@ -27,7 +27,6 @@ var $Gb = {};
     $Gb.Foot = $('footer');
     $Gb.gnbWrap = $Gb.header.find('.gnb-web');
     $Gb.menu = $Gb.gnbWrap.find('.menu');
-    $Gb.gnbBg = $Gb.header.find('.gnb-bg');
     $Gb.depth2 = $Gb.gnbWrap.find('.depth2');
     $Gb.Dropdown = $('.dropDown');
     $Gb.mainCarousel = $('.mainCarousel');
@@ -41,7 +40,6 @@ var $Gb = {};
 
     var gnbHover = function () {
         // pc Gnb
-
         $Gb.menu.find('> li').on({
           mouseenter: function () {
             var trgItem = $(this);
@@ -49,7 +47,10 @@ var $Gb = {};
             trgItem.addClass('on');
             $Gb.menu.find('> li').not(trgItem).removeClass('on');
 
-            $Gb.gnbBg.stop().fadeIn(300);
+            if (!$Gb.menu.hasClass('active')) {
+              $Gb.menu.addClass('active');
+            }
+
             $Gb.depth2.stop().fadeIn(300);
           },
         });
@@ -58,8 +59,8 @@ var $Gb = {};
           mouseleave: function () {
             $Gb.menu.find('> li').removeClass('on');
 
-            $Gb.depth2.stop().fadeOut(300);
-            $Gb.gnbBg.stop().fadeOut(300);
+            $Gb.depth2.css('display', 'none');
+            $Gb.menu.removeClass('active');
           },
         });
 
@@ -70,21 +71,34 @@ var $Gb = {};
             $Gb.menu.find('> li').removeClass('on');
             $(this).closest('li').addClass('on');
 
-            $Gb.gnbBg.stop().fadeIn(200);
+            if (!$Gb.menu.hasClass('active')) {
+              $Gb.menu.addClass('active');
+            }
+
             $Gb.depth2.stop().fadeIn(300);
           },
         });
 
-        $Gb.menu
-          .find('> li')
-          .last()
-          .find('.depth2 li:last-child')
-          .on('focusout', function () {
-            $Gb.menu.find('> li').removeClass('on');
+        $(document).on('focusout', '.menu .btn-wrapper > button:last-of-type', function () {
+          $Gb.menu.find('> li').removeClass('on');
+          $Gb.depth2.css('display', 'none');
 
-            $Gb.depth2.stop().fadeOut(200);
-            $Gb.gnbBg.stop().fadeOut(300);
-          });
+          $Gb.menu.removeClass('active');
+        });
+      },
+      gnbSearchOn = function () {
+        var searchLayer = $Gb.header.find('.searchArea');
+
+        $('.gnbSearchOn').on('click', function () {
+          if (searchLayer.css('display') == 'block') {
+            $('.gnbSearchOn').removeClass('on');
+            searchLayer.stop().slideUp(300);
+          } else {
+            $('.gnbSearchOn').addClass('on');
+            searchLayer.stop().slideDown(300);
+            searchLayer.find('input[type=text]').focus();
+          }
+        });
       },
       allMenu = function () {
         // mobile 전체 메뉴
@@ -231,6 +245,7 @@ var $Gb = {};
       initFunc = function () {
         gnbHover();
         allMenu();
+        gnbSearchOn();
       };
 
     return {

@@ -1,0 +1,30 @@
+/*
+----------------------------
+Font
+----------------------------
+*/
+
+@charset "utf-8";
+
+/**GyeonggiTitle**/
+
+@font-face {
+  font-family: 'GyeonggiTitleL';
+  font-style: normal;
+  font-weight: normal;
+  src: local('※'), url('../fonts/GyeonggiTitle/woff/Title_Light.woff') format('woff'),
+    url('../fonts/GyeonggiTitle/Title_Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GyeonggiTitleM';
+  font-style: normal;
+  font-weight: normal;
+  src: local('※'), url('../fonts/GyeonggiTitle/woff/Title_Medium.woff') format('woff'),
+    url('../fonts/GyeonggiTitle/Title_Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GyeonggiTitleB';
+  font-style: normal;
+  font-weight: normal;
+  src: local('※'), url('../fonts/GyeonggiTitle/woff/Title_Bold.woff') format('woff');
+}
