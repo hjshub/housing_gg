@@ -17,6 +17,9 @@
   background-color: #fff;
   color: #111;
 }
+.selectArea.wide {
+  width: 100%;
+}
 .selectArea label {
   position: absolute;
   display: inline-block;
