@@ -4151,7 +4151,7 @@ opacity
 	display: table;
 	min-width: 230px;
 	width: 230px;
-	height: 40px;
+	height: 55px;
 	color: #fff;
 	text-decoration: none;
 	border: 1px solid #fff;
@@ -4414,7 +4414,7 @@ opacity
 		{
 		min-width: 140px;
 		width: 140px;
-		height: 30px
+		height: 45px;
 	}
 	.visual-sub.h480 .title-wrap .title-box .title-td .title-text {
 		font-size: 24px
@@ -6387,7 +6387,10 @@ opacity
 .page-consult .consult-cards ul li .card {
 	width: 100%;
 	height: 174px;
-	padding-top: 50px
+	padding-top: 50px;
+	box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
 }
 
 .page-consult .consult-cards ul li .card.card-1 {
@@ -7731,12 +7734,14 @@ opacity
 
 .page-board .board-gallery ul li .gallery-box .gallery-wrap .opt .wrap .date
 	{
+	display: inline-block;
 	color: #AF841D;
 	vertical-align: middle
 }
 
 .page-board .board-gallery ul li .gallery-box .gallery-wrap .opt .wrap .sp
 	{
+	display: inline-block;
 	font-size: 12px;
 	vertical-align: middle;
 	padding: 0 15px
@@ -7744,7 +7749,12 @@ opacity
 
 .page-board .board-gallery ul li .gallery-box .gallery-wrap .opt .wrap .view
 	{
-	vertical-align: middle
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.page-board .board-gallery ul li .gallery-box .gallery-wrap .opt .wrap .view * {
+	vertical-align:top;
 }
 
 .page-board .board-qna table {
@@ -10666,6 +10676,9 @@ opacity
 	padding-top: 40px;
 	position: relative;
 	margin-bottom: 10px
+	box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
 }
 
 .fit-housing .help-tip .help-title {

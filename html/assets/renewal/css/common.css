@@ -147,6 +147,7 @@
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   z-index: 777;
+  font-size: 0;
 }
 
 #gnb .h_top h1 img {
