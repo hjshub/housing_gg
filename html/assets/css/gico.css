@@ -1833,7 +1833,7 @@ body.is-active {
 }
 
 .section-sub-start {
-	margin-top: 360px
+	margin-top: 260px
 }
 
 .section-sub-start.withAD {
@@ -1841,7 +1841,7 @@ body.is-active {
 }
 
 .section-sub-start.h580 {
-	margin-top: 580px
+	margin-top: 480px
 }
 
 .section-sub-start.h580.withAD {
@@ -4278,55 +4278,55 @@ opacity
 }
 
 .visual-sub.vs-1 {
-	background: url("/assets/images/visual-sub-1.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-1.jpg") no-repeat center
 		center;
 	background-size: cover
 }
 
 .visual-sub.vs-2 {
-	background: url("/assets/images/visual-sub-2.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-2.jpg") no-repeat center
 		center;
 	background-size: cover
 }
 
 .visual-sub.vs-4 {
-	background: url("/assets/images/visual-sub-4.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-4.jpg") no-repeat center
 		center;
 	background-size: cover
 }
 
 .visual-sub.vs-5 {
-	background: url("/assets/images/visual-sub-5.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-5.jpg") no-repeat center
 		center;
 	background-size: cover
 }
 
 .visual-sub.vs-5-1 {
-	background: url("/assets/images/visual-sub-5-1.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-5-1.jpg") no-repeat center
 		center;
 	background-size: cover
 }
 
 .visual-sub.vs-6 {
-	background: url("/assets/images/visual-sub-6.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-6.jpg") no-repeat center
 		center;
 	background-size: cover
 }
 
 .visual-sub.vs-7 {
-	background: url("/assets/images/visual-sub-7.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-7.jpg") no-repeat center
 		center;
 	background-size: cover
 }
 
 .visual-sub.vs-8 {
-	background: url("/assets/images/visual-sub-8.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-8.jpg") no-repeat center
 		center;
 	background-size: cover
 }
 
 .visual-sub.vs-9 {
-	background: url("/assets/images/visual-sub-9.jpg") no-repeat center
+	background: url("/assets/renewal/images/visual-sub-9.jpg") no-repeat center
 		center;
 	background-size: cover
 }
@@ -5892,7 +5892,7 @@ opacity
 }
 
 .page-service .service-sitemap .ul-sitemap.sitemap-4>li {
-	min-height: 150px
+	min-height: 157px
 }
 
 .page-service .service-sitemap .ul-sitemap li {
@@ -7885,6 +7885,10 @@ opacity
 	vertical-align: middle
 }
 
+.page-board .board-webzine ul li .title .view * {
+	vertical-align: top
+}
+
 .page-board .board-view {
 	border-bottom: 2px solid #081D58
 }
@@ -8628,6 +8632,9 @@ opacity
 	.page-board .board-webzine ul li .title a {
 		line-height: 1.4em
 	}
+	.mView {
+		display: none !important;
+	}
 }
 
 @media only screen and (max-width: 679px) {
@@ -8831,6 +8838,10 @@ opacity
 		display: block;
 		text-align: left
 	}
+	.page-board .board-view table tbody tr.attach-files td span {
+		display:inline-block;
+		width:100%;
+	}
 	.page-board .board-view table tbody tr.attach-files td.right {
 		text-align: center
 	}
@@ -8893,6 +8904,9 @@ opacity
 	}
 	.page-board .board-webzine ul li .title a {
 		line-height: 1.4em
+	}
+	.mView {
+		display: none !important;
 	}
 }
 

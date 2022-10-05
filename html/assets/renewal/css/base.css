@@ -106,7 +106,7 @@ video {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   font-style: normal;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 html {
@@ -172,9 +172,9 @@ input[type='radio'],
 input[type='checkbox'],
 input[type='date'] {
   position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  /*-webkit-appearance: none;*/
+  /*-moz-appearance: none;*/
+  /*appearance: none;*/
 }
 input[type='date'],
 input[type='password'],

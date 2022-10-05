@@ -161,6 +161,10 @@
   background-color: #0e4a9d;
   color: #fff;
 }
+[class*='btn-type'].blue2 {
+  background-color: #0e4a9d;
+  color: #fff;
+}
 [class*='btn-type'].navy {
   background-color: #223359;
   border-color: #223359;

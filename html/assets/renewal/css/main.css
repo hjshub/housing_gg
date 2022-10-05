@@ -19,6 +19,8 @@ body {
   letter-spacing: -0.7px;
   overflow: hidden;
   overflow-y: scroll;
+  -webkit-user-select: none;
+  user-select: none;
 }
 a {
   text-decoration: none;
@@ -42,7 +44,7 @@ strong {
   background-color: #f8f8f8;
 }
 
-#main * {
+#main *:not(.slick-list, .slick-list *) {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -117,6 +119,9 @@ strong {
   background-repeat: no-repeat;
   content: '';
 }
+.btn-more {
+  cursor: pointer;
+}
 .main-section-wrap .board-list {
   margin-top: 35px;
 }
@@ -139,7 +144,7 @@ strong {
   background-color: #36c2ba;
   content: '';
 }
-.main-section-wrap .board-list li a {
+.main-section-wrap .board-list li a span {
   display: inline-block;
   font-size: 18px;
   line-height: 1;
@@ -995,23 +1000,72 @@ strong {
 }
 .main-section-05 .family-site {
   margin-top: 30px;
-  border-radius: 20px;
-  background-color: #fff;
+  padding-bottom: 30px;
+  position: relative;
 }
-.main-section-05 .family-site ul {
-  width: 100%;
-  font-size: 0;
+.main-section-05 .playController {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+.main-section-05 .playController button.play {
+  margin-left: 10px;
+}
+.main-section-05 .footBnrCarousel {
+  overflow: hidden;
+}
+.main-section-05 .footBnrCarousel .slick-slide {
+  float: left;
+}
+.main-section-05 .footBnrCarousel .slide-inner a {
+  display: block;
+  background-color: #fff;
+  margin: 0 15px;
+  padding: 30px 20px;
+  border-radius: 10px;
   text-align: center;
 }
-.main-section-05 .family-site ul li {
-  display: inline-block;
-  line-height: 80px;
+.main-section-05 .footBnrCarousel .slide-inner img {
+  max-width: 100%;
 }
-.main-section-05 .family-site ul li + li {
-  margin-left: 80px;
+.main-section-05 .footBnrCarousel .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 13px;
+  height: 23px;
+  margin-top: -27px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: transparent;
+  text-indent: 9999999px;
+  overflow: hidden;
+  cursor: pointer;
 }
-.main-section-05 .family-site ul li img {
-  vertical-align: middle;
+
+.main-section-05 .footBnrCarousel .slick-arrow.slick-prev {
+  left: -30px;
+  background-image: url('../images/arrow_prev.png');
+}
+.main-section-05 .footBnrCarousel .slick-arrow.slick-next {
+  right: -30px;
+  background-image: url('../images/arrow_next.png');
+}
+
+@media screen and (max-width: 1370px) {
+  .main-section-05 .family-site {
+    padding: 0 30px 30px 30px;
+  }
+  .main-section-05 .playController {
+    right: 45px;
+    bottom: -10px;
+  }
+  .main-section-05 .footBnrCarousel .slick-arrow.slick-prev {
+    left: 0;
+  }
+  .main-section-05 .footBnrCarousel .slick-arrow.slick-next {
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 1200px) {

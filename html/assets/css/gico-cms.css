@@ -3444,7 +3444,7 @@ body.is-active {
 .content-block .content-box .circle-flow .arrow {
   list-style: none !important;
   float: left;
-  width: 70px;
+  width: 30px;
   height: 120px;
   text-align: center;
   vertical-align: middle;
@@ -3747,11 +3747,11 @@ body.is-active {
 }
 
 .visual-sub.youth-housing1 {
-  background: url(/assets/images/gico_gnb2_main_a.jpg) no-repeat center center;
+  background: url(/assets/renewal/images/gico_gnb2_main_a.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .visual-sub.youth-housing2 {
-  background: url(/assets/images/gico_gnb2_main_b.jpg) no-repeat center center;
+  background: url(/assets/renewal/images/gico_gnb2_main_b.jpg) no-repeat center center;
   background-size: cover;
 }

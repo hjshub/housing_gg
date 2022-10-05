@@ -221,19 +221,19 @@
   top: 50%;
   content: '';
 }
-#gnb .btn-wrapper button.has-icon.icon-01 em::before {
+#gnb .btn-wrapper button.has-icon.ico-01 em::before {
   width: 26px;
   height: 26px;
   margin-top: -13px;
   background-position: -3px -2px;
 }
-#gnb .btn-wrapper button.has-icon.icon-02 em::before {
+#gnb .btn-wrapper button.has-icon.ico-02 em::before {
   width: 22px;
   height: 24px;
   margin-top: -12px;
   background-position: -49px -2px;
 }
-#gnb .btn-wrapper button.has-icon.icon-03 em::before {
+#gnb .btn-wrapper button.has-icon.ico-03 em::before {
   width: 24px;
   height: 25px;
   margin-top: -13px;
@@ -512,6 +512,43 @@
   content: '';
 }
 
+#gnb .searchArea dl {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+}
+#gnb .searchArea dl * {
+  vertical-align: top;
+}
+#gnb .searchArea dl dt,
+#gnb .searchArea dl dd {
+  display: table-cell;
+  text-align: left;
+  font-size: 16px;
+}
+
+#gnb .searchArea dl dd div {
+  margin-left: -5px;
+}
+
+#gnb .searchArea dl dt {
+  width: 80px;
+}
+
+#gnb .searchArea dl dd span {
+  word-break: break-all;
+}
+
+#gnb .searchArea dl dd span a {
+  margin: 0 5px;
+}
+
+#gnb .searchArea dl dd span a::before {
+  content: '#';
+}
+
 footer {
   width: 100%;
   position: relative;
@@ -587,7 +624,7 @@ footer .wa-mark img {
   }
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1400px) {
   #gnb .m-menu {
     display: block;
     top: 38px;

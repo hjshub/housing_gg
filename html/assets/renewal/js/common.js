@@ -17,6 +17,7 @@ var $Gb = {};
     if ($('#main').length) {
       $Gb.activeFunc().MainSlider();
       $Gb.activeFunc().SubSlider();
+      $Gb.activeFunc().FootSlider();
     }
   });
 
@@ -31,6 +32,7 @@ var $Gb = {};
     $Gb.Dropdown = $('.dropDown');
     $Gb.mainCarousel = $('.mainCarousel');
     $Gb.subCarousel = $('.subCarousel');
+    $Gb.footBnrCarousel = $('.footBnrCarousel');
     $Gb.scrollTop = document.documentElement.scrollTop;
 
     // Mobile
@@ -167,23 +169,21 @@ var $Gb = {};
         });
       },
       MainSlider = function () {
-        //메인 슬라이드
-        if ($Gb.mainCarousel.length) {
-          $Gb.mainCarousel.slick({
-            dots: true,
-            dotsClass: 'dots-item',
-            infinite: true,
-            speed: 600,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 6000,
-            adaptiveHeight: true,
-            arrows: false,
-            centerMode: true,
-            centerPadding: 0,
-          });
-        }
+        // 메인 슬라이드
+        $Gb.mainCarousel.slick({
+          dots: true,
+          dotsClass: 'dots-item',
+          infinite: true,
+          speed: 600,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          adaptiveHeight: true,
+          arrows: false,
+          centerMode: true,
+          centerPadding: 0,
+        });
 
         //슬라이드 일시정지 버튼
         var playController = $('.main-section-01 .playController');
@@ -206,22 +206,21 @@ var $Gb = {};
         });
       },
       SubSlider = function () {
-        if ($Gb.subCarousel.length) {
-          $Gb.subCarousel.slick({
-            dots: true,
-            dotsClass: 'dots-item',
-            infinite: true,
-            speed: 600,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 6000,
-            adaptiveHeight: true,
-            arrows: false,
-            centerMode: true,
-            centerPadding: 0,
-          });
-        }
+        // 중단 배너 슬라이드
+        $Gb.subCarousel.slick({
+          dots: true,
+          dotsClass: 'dots-item',
+          infinite: true,
+          speed: 600,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          adaptiveHeight: true,
+          arrows: false,
+          centerMode: true,
+          centerPadding: 0,
+        });
         //슬라이드 일시정지 버튼
         var playController = $('.main-section-03 .playController');
 
@@ -242,6 +241,59 @@ var $Gb = {};
           });
         });
       },
+      FootSlider = function () {
+        // 하단 슬라이드
+        $Gb.footBnrCarousel.slick({
+          dots: false,
+          infinite: true,
+          speed: 400,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4000,
+
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 561,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+
+        //슬라이드 일시정지 버튼
+        var playController = $('.family-site .playController');
+
+        playController.append('<button class="btn-controller pause"><em class="hidden_txt">일시정지</em></button>');
+        playController.append('<button class="btn-controller play"><em class="hidden_txt">재생하기</em></button>');
+
+        playController.each(function () {
+          var btnController = $(this).find('.btn-controller');
+
+          btnController.on('click', function () {
+            if ($(this).hasClass('pause')) {
+              $Gb.footBnrCarousel.slick('slickPause');
+              console.log('foot 배너 슬라이드 일시정지');
+            } else {
+              $Gb.footBnrCarousel.slick('slickPlay');
+              console.log('foot 배너 슬라이드 재생');
+            }
+          });
+        });
+      },
       initFunc = function () {
         gnbHover();
         allMenu();
@@ -252,6 +304,7 @@ var $Gb = {};
       initFunc: initFunc,
       MainSlider: MainSlider,
       SubSlider: SubSlider,
+      FootSlider: FootSlider,
     };
   }
 
