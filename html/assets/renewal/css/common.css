@@ -363,6 +363,7 @@
 
 #gnb .etc-info span {
   display: inline-block;
+  vertical-align: middle;
 }
 
 #gnb .etc-info span * {

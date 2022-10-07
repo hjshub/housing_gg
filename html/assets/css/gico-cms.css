@@ -3755,3 +3755,131 @@ body.is-active {
   background: url(/assets/renewal/images/gico_gnb2_main_b.jpg) no-repeat center center;
   background-size: cover;
 }
+
+#cms .sub_bnrTop {
+  width: 100%;
+  position: relative;
+  height: 160px;
+  margin-bottom: 60px;
+  padding: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 5px 7px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 6px 8px 2px rgba(0, 0, 0, 0.15);
+  color: #222;
+}
+#cms .sub_bnrTop > div {
+  width: -webkit-calc(100% - 500px);
+  width: -moz-calc(100% - 500px);
+  width: calc(100% - 500px);
+  padding-left: 55px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#cms .sub_bnrTop p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+#cms .sub_bnrTop p.sm-txt-info {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+#cms .sub_bnrTop::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: '';
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#cms .sub_bnrTop_01::before {
+  width: 387px;
+  height: 202px;
+  background-image: url('../images/cms/sub_bnrTop_01.png');
+}
+#cms .sub_bnrTop_02::before {
+  width: 379px;
+  height: 191px;
+  background-image: url('../images/cms/sub_bnrTop_02.png');
+}
+#cms .sub_bnrTop_03::before {
+  width: 383px;
+  height: 187px;
+  background-image: url('../images/cms/sub_bnrTop_03.png');
+}
+#cms .sub_bnrTop_04::before {
+  width: 444px;
+  height: 192px;
+  background-image: url('../images/cms/sub_bnrTop_04.png');
+}
+#cms .sub_bnrTop_05::before {
+  width: 366px;
+  height: 204px;
+  background-image: url('../images/cms/sub_bnrTop_05.png');
+}
+#cms .sub_bnrTop_06::before {
+  width: 382px;
+  height: 190px;
+  background-image: url('../images/cms/sub_bnrTop_06.png');
+}
+#cms .sub_bnrTop_07::before {
+  width: 354px;
+  height: 191px;
+  background-image: url('../images/cms/sub_bnrTop_07.png');
+}
+#cms .sub_bnrTop_08::before {
+  width: 379px;
+  height: 177px;
+  background-image: url('../images/cms/sub_bnrTop_08.png');
+}
+#cms .sub_bnrTop_09::before {
+  width: 420px;
+  height: 196px;
+  background-image: url('../images/cms/sub_bnrTop_09.png');
+}
+
+@media only screen and (max-width: 1200px) {
+  #cms .sub_bnrTop {
+    height: 250px;
+  }
+  #cms .sub_bnrTop::before {
+    height: 100% !important;
+  }
+  #cms .sub_bnrTop > div {
+    width: -webkit-calc(100% - 450px);
+    width: -moz-calc(100% - 450px);
+    width: calc(100% - 450px);
+  }
+}
+@media only screen and (max-width: 991px) {
+  #cms .sub_bnrTop > div {
+    padding-left: 40px;
+  }
+  #cms .sub_bnrTop p {
+    font-size: 16px;
+  }
+  #cms .sub_bnrTop p.sm-txt-info {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #cms .sub_bnrTop::before {
+    width: 250px !important;
+  }
+  #cms .sub_bnrTop > div {
+    width: -webkit-calc(100% - 280px);
+    width: -moz-calc(100% - 280px);
+    width: calc(100% - 280px);
+  }
+  #cms .sub_bnrTop_09 {
+    height: 200px;
+  }
+}

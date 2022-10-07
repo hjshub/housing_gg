@@ -327,6 +327,7 @@ strong {
   padding-top: 80px;
   position: relative;
   /* box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, 0.05); */
+  vertical-align: top;
 }
 
 .main-section-01 .mainCarousel .slide-inner article dl dd ul li + li {
