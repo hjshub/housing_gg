@@ -120,7 +120,7 @@ var $Gb = {};
                   $Gb.dimmedAllmenu.insertAfter($Gb.gnbWrap_m).stop().fadeIn(400);
                   $Gb.Body.css({
                     height: $Gb.dimmedAllmenu.height(),
-                    overflow: 'hidden',
+                    'overflow-y': 'hidden',
                   });
                 },
               }
@@ -135,7 +135,7 @@ var $Gb = {};
             );
             $Gb.Body.css({
               height: 'auto',
-              overflow: 'visible',
+              'overflow-y': 'visible',
             });
             $Gb.dimmedAllmenu.stop().fadeOut(300, function () {
               $(this).remove();

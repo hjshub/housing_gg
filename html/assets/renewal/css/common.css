@@ -44,6 +44,11 @@ body {
   height: 100%;
 }
 
+body {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
 .scroll-wrap {
   max-height: 100vh;
   overflow: hidden;
