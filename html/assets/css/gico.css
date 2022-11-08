@@ -5990,7 +5990,7 @@ opacity
 	position:absolute;
 	top:0;
 	left:50%;
-	margin-left:-40px;
+	margin-left:-34px;
 	background-image:url('../images/privacy/icon-set-pri_label.png');
 	background-color:transparent;
 	background-repeat:no-repeat;
@@ -6146,6 +6146,34 @@ opacity
 	height:30px;
 	background-position:-641px -101px;
 }
+.page-service .service-privacy .btn-default {
+	margin:30px 0;
+}
+.page-service .service-privacy .btn-border {
+	display:inline-block;
+	font-size: 16px;
+    padding: 10px;
+    border-radius: 0px;
+    color: #000;
+    box-shadow: none;
+	line-height:1;
+    font-weight: bold;
+	border:1px solid currentColor;
+}
+.page-service .service-privacy .btn-border.blue {
+	color: #005AAB;
+}
+.page-service .service-privacy .btn-border.blue:hover,
+.page-service .service-privacy .btn-border.blue:focus {
+	color: #fff;
+	background-color:#005AAB;
+}
+.mob-only {
+	display:none !important;
+}
+.mob-only.inline {
+	display:none !important;
+}
 
 @media only screen and (max-width:1200px){
 	.page-service .service-privacy .label_list_box_type {
@@ -6168,6 +6196,12 @@ opacity
 @media only screen and (max-width:768px){
 	.page-service .service-privacy .label_list_box_type > li {
 		width:30%;
+	}
+	.mob-only {
+		display:block !important;
+	}
+	.mob-only.inline {
+		display:inline-block !important;
 	}
 }
 
